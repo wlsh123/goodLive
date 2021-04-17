@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom'
+import SearchInput from '../SearchInput'
 import './style.less'
 import '../../static/css/font/iconfont.css'
 class Head extends Component {
@@ -18,7 +19,7 @@ class Head extends Component {
         <div className='home-header-middle'>
           <div className='search-container'>
             <i className='iconfont icon-shouye'></i>
-            <input type="text"/>
+            <SearchInput />
           </div>
         </div>
       </div>

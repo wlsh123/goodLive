@@ -5,6 +5,7 @@ import Life from '../pages/Life'
 import Mine from '../pages/Mine'
 import Shop from '../pages/Shop'
 import City from '../pages/City'
+import Search from '../pages/Search'
 import NotFound from '../pages/NotFound'
 import { initCity} from '../actions/city'
 import {connect} from 'react-redux'
@@ -27,6 +28,7 @@ class AppRouter extends React.Component{
           <Route path='/mine' component={Mine}></Route>
           <Route path='/shop' component={Shop}></Route>
           <Route path='/city' component={City}></Route>
+          <Route path='/search/:keywords' component={Search}></Route>
           <Route component={NotFound}></Route>
         </Switch>
       </Router>
