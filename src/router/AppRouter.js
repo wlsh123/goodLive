@@ -9,16 +9,7 @@ import Search from '../pages/Search'
 import NotFound from '../pages/NotFound'
 import { initCity} from '../actions/city'
 import {connect} from 'react-redux'
-import myStorage from '../utils/myStorage'
 class AppRouter extends React.Component{
-  //初始化操作
-  componentDidMount(){
-    if (myStorage.getItem('city')) {
-      this.props.initCity({
-          cityName:myStorage.getItem('city')
-      })
-    }
-  }
   render(){
     return(
       <Router>

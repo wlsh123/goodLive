@@ -80,12 +80,11 @@ https://github.com/oliviertassinari/react-swipeable-views
 
 
 
-搭建后台：react/project/goodLive/server
-
-npm install --save express
-
-安装依赖解决跨域问题：npm install --save-dev http-proxy-middleware
-
+9.搭建后台：react/project/goodLive/server
+  npm install --save express
+  
+10. 安装依赖解决跨域问题：npm install --save-dev http-proxy-middleware
+11.前台获取数据
 
 
 redux环境配置：

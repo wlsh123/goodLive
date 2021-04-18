@@ -15,7 +15,6 @@ class Home extends Component {
         <Header cityName={this.props.city.cityName}/>
         <HomeSwiper banners = {[bannar1,bannar2,bannar3]} />
         <HomeHot />
-        Home
         <FootNav />
       </div>
      );

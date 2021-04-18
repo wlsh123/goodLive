@@ -4,7 +4,6 @@ class HomeHotView extends Component {
   render() {
     const data = this.props.data;
     const title = this.props.title
-    // console.log(data)
     return (
       <div className='hotproduct'>
         <h3>{title}</h3>

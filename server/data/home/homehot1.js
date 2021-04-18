@@ -4,51 +4,51 @@ module.exports = {
       id: Math.random().toString().slice(2),
       title: '储物柜',
       img: 'http://iwenwiki.com/api/livable/homehot/img_chuwugui.png',
-      link: 'http://www.iwenwiki.com/'
+      link: 'https://www.ygyg.cn/'
     },
     {
       id: Math.random().toString().slice(2),
       title: '照明灯',
       img: 'http://iwenwiki.com/api/livable/homehot/img_zhaoming.png',
-      link: 'http://www.iwenwiki.com/'
+      link: 'https://www.ygyg.cn/'
     },
     {
       id: Math.random().toString().slice(2),
       title: '抱枕',
-      img: '',
-      link: 'http://www.iwenwiki.com/'
+      img: 'http://iwenwiki.com/api/livable/homehot/img_baozhen.png',
+      link: 'https://www.ygyg.cn/'
     },
     {
       id: Math.random().toString().slice(2),
       title: '化妆镜',
-      img: '',
-      link: 'http://www.iwenwiki.com/'
+      img: 'http://iwenwiki.com/api/livable/homehot/img_jingzi.png',
+      link: 'https://www.ygyg.cn/'
     }
   ],
   hot2: [
     {
       id: Math.random().toString().slice(2),
-      title: '落地灯',
-      img: '',
-      link: 'http://www.iwenwiki.com/'
+      title: '闸阀',
+      img: 'http://res.ygyg.cn/userbusipub/M00/05/3B/CiZNMlyF_ueABnQqAAIxhWt4aug230.png',
+      link: 'https://www.ygyg.cn/'
     },
     {
       id: Math.random().toString().slice(2),
-      title: '置物架',
-      img: '',
-      link: 'http://www.iwenwiki.com/'
+      title: 'PE球阀',
+      img: 'http://res.ygyg.cn/userbusipub/M00/00/07/CiZNMls97waAZgXdAAGsyUwIjFo636.jpg',
+      link: 'https://www.ygyg.cn/'
     },
     {
       id: Math.random().toString().slice(2),
-      title: '矮脚灯',
-      img: '',
-      link: 'http://www.iwenwiki.com/'
+      title: '电磁阀',
+      img: 'http://res.ygyg.cn/userbusipub/M00/00/02/CiZNMls9gv-ANW8jAADdzBhsLeU888.jpg',
+      link: 'https://www.ygyg.cn/'
     },
     {
       id: Math.random().toString().slice(2),
-      title: '毛巾',
-      img: '',
-      link: 'http://www.iwenwiki.com/'
+      title: '截止阀',
+      img: 'http://res.ygyg.cn/userbusipub/M00/06/1B/CvAAEV37NsiAcjWeAAD4QE_T5uM045.jpg',
+      link: 'https://www.ygyg.cn/'
     }
   ]
 }
