@@ -84,6 +84,8 @@ https://github.com/oliviertassinari/react-swipeable-views
   npm install --save express
   
 10. 安装依赖解决跨域问题：npm install --save-dev http-proxy-middleware
+
+11. 安装nodemon，实现热更新
 11.前台获取数据
 
 

@@ -14,16 +14,9 @@ class HomeHot extends Component {
       baseURL:'http://localhost:3200/api',
       headers: { 'X-Requested-With': 'XMLHttpRequest' },
     })
-    // instance.get('/homehot1').then(res => {
-    //   // console.log(res.data);
-    //   let data1 = res.data;
-    //   this.setState({
-    //     homehot1:data1
-    //   })
-    // })
-    axios.all([instance.get('/homehot1'), instance.get('/homehot2')])
+    axios.all([instance.get('/homehot1', { params: { city: this.props.cityName } }), instance.get('/homehot2', { params: { city: this.props.cityName } })])
     .then(axios.spread((hot1Res,hot2Res)=>{
-      console.log(hot1Res, hot2Res)
+      // console.log(hot1Res, hot2Res)
       this.setState({
         homehot1: hot1Res.data,
         homehot2: hot2Res.data

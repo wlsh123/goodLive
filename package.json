@@ -156,6 +156,7 @@
     "@babel/helper-create-class-features-plugin": "^7.13.11",
     "express": "^4.17.1",
     "less": "^4.1.1",
+    "nodemon": "^2.0.7",
     "react-redux": "^7.2.3",
     "react-router-dom": "^5.2.0",
     "redux": "^4.0.5",

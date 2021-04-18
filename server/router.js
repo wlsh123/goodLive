@@ -7,10 +7,27 @@ const homehotData2 = require("./data/home/homehot2")
 const searchData = require('./data/search')
 
 router.get('/homehot1', (req, res)=>{
-  res.send(homehotData.hot1)
+  const city = url.parse(req.url, true).query.city;
+  // console.log(city);
+  if (city==='北京') {
+    res.send(homehotData2.hot1)
+  } else {
+    res.send(homehotData.hot1)
+  }
 })
 router.get('/homehot2', (req, res) => {
-  res.send(homehotData.hot2)
+  const city = url.parse(req.url, true).query.city;
+  if (city === '北京') {
+    res.send(homehotData2.hot2)
+  } else {
+    res.send(homehotData.hot2)
+  }
 })
-
+router.get('/search',(req,res)=>{
+  //url.parse()可以将一个完整的URL地址，分为很多部分，常用的有：host、port、pathname、path、query。
+  //第二个参数为true，query属性会生成一个对象，如果为false, 则返回url对象上的query属性会是一个未解析，未解码的字符串，默认为false
+  const {keywords, city, page} = url.parse(req.url,true).query;
+  console.log('keywords='+keywords,'city='+city,'page='+page)
+  res.send(searchData);
+})
 module.exports = router;

@@ -14,7 +14,7 @@ class Home extends Component {
       <div>
         <Header cityName={this.props.city.cityName}/>
         <HomeSwiper banners = {[bannar1,bannar2,bannar3]} />
-        <HomeHot />
+        <HomeHot cityName={this.props.city.cityName} />
         <FootNav />
       </div>
      );

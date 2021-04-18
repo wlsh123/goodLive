@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import storage from '../../../utils/myStorage'
 import './style.less'
 
 class CityList extends Component {
@@ -10,6 +11,9 @@ class CityList extends Component {
     this.props.changeCity({
       cityName:c
     })
+    window.history.back()
+    //存储用户的选择
+    storage.setItem('city', c)
   }
   render() { 
     const city = this.state.city
