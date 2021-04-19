@@ -5,6 +5,7 @@ const url = require("url")
 const homehotData = require("./data/home/homehot1")
 const homehotData2 = require("./data/home/homehot2")
 const searchData = require('./data/search')
+const detailData = require('./data/detail')
 
 router.get('/homehot1', (req, res)=>{
   const city = url.parse(req.url, true).query.city;
@@ -29,5 +30,12 @@ router.get('/search',(req,res)=>{
   const {keywords, city, page} = url.parse(req.url,true).query;
   console.log('keywords='+keywords,'city='+city,'page='+page)
   res.send(searchData);
+})
+
+// 详情接口
+router.get('/detail', (req,res)=>{
+  const { id } = url.parse(req.url, true).query;
+  console.log('ID'+id)
+  res.send(detailData)
 })
 module.exports = router;

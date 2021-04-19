@@ -1,0 +1,21 @@
+module.exports = {
+  imgs:[
+    'http://iwenwiki.com/api/livable/search/1.jpg',
+    'http://iwenwiki.com/api/livable/search/2.JPG',
+    'http://iwenwiki.com/api/livable/search/3.jpg',
+    'http://iwenwiki.com/api/livable/search/4.JPG',
+    'http://iwenwiki.com/api/livable/search/5.jpg',
+    'http://iwenwiki.com/api/livable/search/6.jpg'
+  ],
+  title:'豪宅·壹号院四居室-朝南',
+  price:'1999999',
+  rentType:'整租',
+  houseType:'273.32立方米',
+  info:{
+    years:'2002年',
+    type:'四室一厅',
+    level:'17/19层',
+    style:'精装型',
+    orientation:'朝南'
+  }
+}
