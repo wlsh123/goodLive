@@ -16,7 +16,15 @@ class SearchInput extends Component {
 
   keyUpHandler = (e)=>{
     if (e.keyCode == 13) {
-      this.props.history.push('/search/'+this.state.searchValue)
+      this.props.history.push('/search/'+this.state.searchValue);
+    }
+  }
+  componentDidUpdate=(preProps)=>{
+    // console.log(this.props.keywords);
+    if (preProps.keywords !== this.props.keywords) {
+      this.setState({
+        searchValue: this.props.keywords
+      })
     }
   }
   render() { 

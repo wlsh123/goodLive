@@ -42,12 +42,29 @@ class SearchList extends Component {
     const page = this.state.page;
     this.http(keywords,cityName,page);
   }
-
+  async componentDidUpdate(preProps,preState){
+    if (preProps.keywords !== this.props.keywords) {
+      const keywords = this.props.keywords;
+      const cityName = this.props.cityName;
+      await this.setStateAsync({
+        page:1,
+        searchData:[]
+      });
+      this.http(keywords, cityName, this.state.page)
+    }
+  }
+  setStateAsync(state){
+    return new Promise((resolve)=>{
+      this.setState(state,resolve)
+      // console.log(resolve)
+    })
+  }
   onLoadMoreHandle = ()=>{
     const keywords = this.props.keywords;
     const cityName = this.props.cityName;
     const page = this.state.page;
     this.http(keywords, cityName, page);
+    // console.log(keywords,cityName,page);
   }
   render() { 
     return ( 

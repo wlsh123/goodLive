@@ -6,7 +6,7 @@ class Search extends Component {
   render() { 
     return ( 
       <div>
-        <SearchHeader />
+        <SearchHeader keywords={this.props.match.params.keywords}/>
         <SearchList 
           keywords={this.props.match.params.keywords}
           cityName={this.props.city.cityName}

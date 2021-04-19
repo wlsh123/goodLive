@@ -13,7 +13,7 @@ class SearchHeader extends Component {
         </span>
         <div className='input-container'>
           <i className=''></i>
-          <SearchInput />
+          <SearchInput keywords={this.props.keywords}/>
         </div>
       </div>
      );

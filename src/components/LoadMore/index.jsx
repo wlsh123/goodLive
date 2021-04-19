@@ -14,11 +14,11 @@ class LoadMore extends Component {
       // console.log(this.Container)
       //节流和防抖
       if (timer) {
-        clearTimeout(timer)
+        clearTimeout(timer);
       }
       timer = setTimeout(() => {
-        if (currentEleHeight < WinHeight) {
-          console.log('该加载数据了')
+        if (currentEleHeight <= WinHeight) {
+          // console.log('该加载数据了')
           this.props.onLoadMore()
         }
       }, 300);
