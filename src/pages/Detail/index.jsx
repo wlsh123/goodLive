@@ -1,21 +1,20 @@
-import React, { Component } from 'react';
-import DetailHeader from './DetailHeader';
-import DetailInfo from './DetailInfo';
+import React, { Component } from "react";
+import HeadComponent from "../../components/HeadComponent";
+import DetailInfo from "./DetailInfo";
 class Detail extends Component {
   constructor(props) {
     super(props);
-    this.state = {  }
+    this.state = {};
   }
-  render() { 
+  render() {
     // console.log(this.props)
-    return ( 
+    return (
       <div>
-        <DetailHeader title={this.props.match.params.title}/>
+        <HeadComponent title={"详情页"} />
         <DetailInfo id={this.props.match.params.id} />
-        xiangqing:{this.props.match.params.id}
       </div>
-     );
+    );
   }
 }
- 
+
 export default Detail;
