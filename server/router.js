@@ -6,6 +6,7 @@ const homehotData = require("./data/home/homehot1")
 const homehotData2 = require("./data/home/homehot2")
 const searchData = require('./data/search')
 const detailData = require('./data/detail')
+const commentData = require('./data/comment')
 
 router.get('/homehot1', (req, res)=>{
   const city = url.parse(req.url, true).query.city;
@@ -35,7 +36,12 @@ router.get('/search',(req,res)=>{
 // 详情接口
 router.get('/detail', (req,res)=>{
   const { id } = url.parse(req.url, true).query;
-  console.log('ID'+id)
+  // console.log('ID'+id)
   res.send(detailData)
 })
-module.exports = router;
+// 评论接口
+router.get('/comment',(req,res)=>{
+  const { id } = url.parse(req.url, true).query;
+  res.send(commentData)
+})
+module.exports = router; 

@@ -18,7 +18,7 @@ class DetailInfo extends Component {
     instance
       .get("/detail", { params: { id: this.props.id } })
       .then((response) => {
-        console.log(response);
+        // console.log(response);
         this.setState({
           detailData: response.data,
         });
@@ -36,7 +36,7 @@ class DetailInfo extends Component {
           <div>图片走丢啦！</div>
         )}
         {this.state.detailData.imgs ? (
-          <DetailInfoView data={this.state.detailData} />
+          <DetailInfoView id={this.props.id} data={this.state.detailData} />
         ) : (
           <div>等待数据加载</div>
         )}
