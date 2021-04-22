@@ -10,26 +10,26 @@ class Comment extends Component {
       hasMore: false
      }
   }
-  componentDidMount() {
+  http() {
     const instance = axios.create({
-      baseURL: "http://localhost:3200/api",
-      headers: { "X-Requested-With": "XMLHttpRequest" },
-    });
+      baseURL: 'http://localhost:3200/api',
+      headers: { 'X-Requested-With': 'XMLHttpRequest' },
+    })
     instance
       .get("/comment", { params: { id: this.props.id } })
       .then((response) => {
         // console.log(response.data);
         this.setState({
-          commentData:response.data.data,
-          hasMore:response.data.hasMore
+          commentData: this.state.commentData.concat(response.data.data),
+          hasMore: response.data.hasMore
         })
       })
-      .catch(function (error) {
-        console.log(error);
-      });
+  }  
+  componentDidMount() {
+   this.http()
   }
   loadMoreHandle=()=>{
-    
+    this.http()
   }
   render() { 
     return ( 
@@ -41,7 +41,7 @@ class Comment extends Component {
         }
         {
           this.state.hasMore ? 
-            <LoadMore onLoad={this.loadMoreHandle}/>:
+            <LoadMore onLoadMore={this.loadMoreHandle}/>:
             <div>没有新评论辣！</div>
         }
       </div>

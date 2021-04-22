@@ -10,7 +10,7 @@ class CommentStar extends Component {
       <div className='star-container'>
         {
           [1,2,3,4,5].map((item, index)=>{
-            let lightClass = star >=item ? 'light': ''
+            let lightClass = star >= item ? 'light': ''
             return <i key={index} className={'iconfont icon-shouye' + lightClass}></i>
           })
         }

@@ -8,10 +8,12 @@ class SearchList extends Component {
     this.state={
       searchData:[],
       hasMore:true,
-      page:1
+      page:1,
+      isLoading:false
     }
   }
   http(keywords, cityName, page){
+    this.setState({isLoading:true})
     const instance = axios.create({
       baseURL: 'http://localhost:3200/api',
       headers: { 'X-Requested-With': 'XMLHttpRequest' },
@@ -29,7 +31,8 @@ class SearchList extends Component {
         this.setState({
           searchData: this.state.searchData.concat(resData.data),
           hasMore: resData.hasMore,
-          page:this.state.page+1
+          page:this.state.page+1,
+          isLoading:false
         })
       })
       .catch(function (error) {
@@ -37,10 +40,12 @@ class SearchList extends Component {
       });
   }
   componentDidMount(){
-    const keywords = this.props.keywords;
-    const cityName = this.props.cityName;
-    const page = this.state.page;
-    this.http(keywords,cityName,page);
+    if (!this.state.isLoading) {
+      const keywords = this.props.keywords;
+      const cityName = this.props.cityName;
+      const page = this.state.page;
+      this.http(keywords, cityName, page);
+    }
   }
   async componentDidUpdate(preProps,preState){
     if (preProps.keywords !== this.props.keywords) {

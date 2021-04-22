@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Tabs from "../../../components/Tabs";
+import BuyStore from "../BuyStore";
 import Comment from "../Comment";
 import "./style.less";
 class DetailInfoView extends Component {
@@ -39,9 +40,10 @@ class DetailInfoView extends Component {
                   <p>年代：{data.info.years}</p>
                 </div>
               </div>
+              <BuyStore />
             </div>
             <div tabName='房屋评价'>
-              <Comment id={this.props.id} />
+            <Comment id={this.props.id} />
             </div>
           </Tabs>
       </div>

@@ -13,7 +13,7 @@ class Item extends Component {
         <div className='comment-item'>
           <h3>
             <i className='iconfont icon-shouye'></i>&nbsp;
-            {item.username}
+            {item.username} 
           </h3>
           <CommentStar star={item.start}/>
           <p>{item.comment}</p>
