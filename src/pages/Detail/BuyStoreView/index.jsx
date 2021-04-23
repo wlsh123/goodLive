@@ -5,14 +5,14 @@ class BuyStoreView extends Component {
     super(props);
     this.state = {  }
   }
-  clickBuyHandler=()=>{
-
+  clickStoreHandle=()=>{
+    this.props.onStore();
   }
   render() { 
     return ( 
       <div className='buy-store-container clear-flex'>
         <div className='item-container float-left'>
-         <button>收藏</button>
+          <button className='selected' onClick={this.clickStoreHandle}>收藏</button>
         </div>
         <div className='item-container float-right'>
           <button>购买</button>
