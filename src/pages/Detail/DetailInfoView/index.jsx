@@ -40,7 +40,7 @@ class DetailInfoView extends Component {
                   <p>年代：{data.info.years}</p>
                 </div>
               </div>
-              <BuyStore />
+              <BuyStore id={this.props.id}/>
             </div>
             <div tabName='房屋评价'>
             <Comment id={this.props.id} />

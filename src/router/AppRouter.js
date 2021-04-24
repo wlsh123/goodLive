@@ -11,6 +11,7 @@ import Login from '../pages/Login'
 import NotFound from '../pages/NotFound'
 import { initCity} from '../actions/city'
 import {connect} from 'react-redux'
+import ShopCar from '../pages/ShopCar';
 class AppRouter extends React.Component{
   render(){
     return(
@@ -22,6 +23,7 @@ class AppRouter extends React.Component{
           <Route path='/shop' component={Shop}></Route>
           <Route path='/city' component={City}></Route>
           <Route path='/login' component={Login}></Route>
+          <Route path='/shopcar' component={ShopCar}></Route>
           <Route path='/search/:keywords' component={Search}></Route>
           <Route path='/detail/:id' component={Detail}></Route>
           <Route component={NotFound}></Route>

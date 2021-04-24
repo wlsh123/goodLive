@@ -6,8 +6,11 @@ export default function collect(state=initState, action){
     case COLLECTED:
       return [...state,action.data]
     case UNCOLLECTED:
-      return
-    
+      return state.filter((item)=>{
+        if (item.id != action.data.id) {
+          return item
+        }
+      })
     default:
       return state;
   }

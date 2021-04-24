@@ -14,7 +14,9 @@ class Head extends Component {
           </Link>
         </div>
         <div className='home-header-right float-right'>
-          <i className='iconfont icon-shouye'></i>
+          <Link to='/shopcar'>
+            <i className='iconfont icon-shouye'></i>
+          </Link>
         </div>
         <div className='home-header-middle'>
           <div className='search-container'>
