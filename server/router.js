@@ -7,7 +7,7 @@ const homehotData2 = require("./data/home/homehot2")
 const searchData = require('./data/search')
 const detailData = require('./data/detail')
 const commentData = require('./data/comment')
-
+const orderData = require('./data/order')
 router.get('/homehot1', (req, res)=>{
   const city = url.parse(req.url, true).query.city;
   // console.log(city);
@@ -43,5 +43,10 @@ router.get('/detail', (req,res)=>{
 router.get('/comment',(req,res)=>{
   const { id } = url.parse(req.url, true).query;
   res.send(commentData)
+})
+// 订单接口
+router.get('/order', (req,res)=>{
+  const { username } = url.parse(req.url, true).query;
+  res.send(orderData)
 })
 module.exports = router; 
