@@ -49,4 +49,10 @@ router.get('/order', (req,res)=>{
   const { username } = url.parse(req.url, true).query;
   res.send(orderData)
 })
+
+router.post('/getcomment', (req, res)=>{
+  const content = req.body.content;
+  console.log(content);
+  res.send({msg:true})
+})
 module.exports = router; 
