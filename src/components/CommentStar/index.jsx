@@ -11,7 +11,7 @@ class CommentStar extends Component {
         {
           [1,2,3,4,5].map((item, index)=>{
             let lightClass = star >= item ? 'light': ''
-            return <i key={index} className={'iconfont icon-shouye' + lightClass}></i>
+            return <i key={index} className={'iconfont icon-pingfen' + lightClass}></i>
           })
         }
       </div>

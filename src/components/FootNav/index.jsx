@@ -21,7 +21,7 @@ class FootNav extends Component {
           </li>
           <li>
             <NavLink to='/life'>
-              <i className='iconfont icon-qunfengshenghuofuwuxian'></i>
+              <i className='iconfont icon-fuwu'></i>
               生活服务
             </NavLink>
           </li>

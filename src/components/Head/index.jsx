@@ -10,17 +10,17 @@ class Head extends Component {
         <div className='home-header-left float-left'>
           <Link to='/city'>
             <span>{this.props.cityName}</span>
-            <i className='iconfont icon-shouye'></i>
+            <i className='iconfont icon-didian'></i>
           </Link>
         </div>
         <div className='home-header-right float-right'>
           <Link to='/shopcar'>
-            <i className='iconfont icon-shouye'></i>
+            <i className='iconfont icon-gouwuche2'></i>
           </Link>
         </div>
         <div className='home-header-middle'>
           <div className='search-container'>
-            <i className='iconfont icon-shouye'></i>
+            <i className='iconfont icon-suosou'></i>
             <SearchInput />
           </div>
         </div>

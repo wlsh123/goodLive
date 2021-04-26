@@ -20,7 +20,7 @@ class LoginView extends Component {
     return ( 
       <div id='login-container'>
         <div className='input-container phone-container'>
-          <i className=''></i>
+          <i className='iconfont icon-zhanghu'></i>
           <input 
             type="text" 
             value={this.state.username}
@@ -29,7 +29,7 @@ class LoginView extends Component {
             />
         </div>
         <div className='input-container password-container'>
-          <i className=''></i>
+          <i className='iconfont icon-mima'></i>
           <button>发送验证码</button>
           <input type="text" placeholder="请输入验证码"/>
         </div>

@@ -9,11 +9,11 @@ class ShopCarInfo extends Component {
     return ( 
       <div className='userinfo-container'>
         <p>
-          <i className=''></i>
+          <i className='iconfont icon-zhanghao_huabanfuben'></i>&nbsp;&nbsp;
           <span>{this.props.username}</span>
         </p>
         <p>
-          <i className=''></i>
+          <i className='iconfont icon-chengshi'></i>&nbsp;&nbsp;
           <span>{this.props.city}</span>
         </p>
       </div>

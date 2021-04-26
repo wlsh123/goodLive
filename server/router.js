@@ -51,8 +51,6 @@ router.get('/order', (req,res)=>{
 })
 
 router.post('/getcomment', (req, res)=>{
-  const content = req.body.content;
-  console.log(content);
   res.send({msg:true})
 })
 module.exports = router; 

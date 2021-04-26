@@ -9,10 +9,10 @@ class SearchHeader extends Component {
     return ( 
       <div id='search-header' className='clear-fix'>
         <span className='back-icon float-left' onClick={this.clickHandler}>
-          <i className=''></i>
+          <i className='iconfont icon-fanhui'></i>
         </span>
         <div className='input-container'>
-          <i className=''></i>
+          <i className='iconfont icon-suosou'></i>
           <SearchInput keywords={this.props.keywords}/>
         </div>
       </div>

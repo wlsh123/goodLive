@@ -33,7 +33,7 @@ class Item extends Component {
        }
      })
    }else{
-     alert('请输入评价信息')
+     alert('请填写评价信息')
    }
   }
   CancelHandle=()=>{

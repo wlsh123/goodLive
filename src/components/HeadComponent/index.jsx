@@ -9,7 +9,7 @@ class HeadComponent extends Component {
     return ( 
       <div id='common-header'>
         <span className='back-icon' onClick={this.clickBackHandle}>
-          <i className='iconfont icon-shouye'></i>
+          <i className='iconfont icon-fanhui'></i>
         </span>
         <h1>{this.props.title}</h1>
       </div>
